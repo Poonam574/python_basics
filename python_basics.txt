@@ -1,0 +1,349 @@
+Variable: A variable stores data that can be used and changed during program execution.
+
+Data Types: Data types classify data into categories like int, float, str, list, dict, etc.
+
+OOPs (Object-Oriented Programming): OOP is a programming paradigm based on using objects and classes to structure code.
+
+Functions: A function is a reusable block of code that performs a specific task when called.
+
+Packages: Packages are collections of Python modules organized in directories to organize and reuse code.
+
+Exceptions: Exceptions are errors detected during execution that can be handled using try-except blocks.
+
+File Handling: File handling allows reading from and writing to files using functions like open(), read(), and write()
+
+Variables in Python
+
+Definition: Variables are containers used to store data values.
+
+Characteristics:
+
+No need to declare type explicitly.
+
+Variable names must start with a letter or underscore.
+
+Example:
+x = 10        # Integer
+name = "John" # String
+is_valid = True # Boolean
+
+🔹 2. Data Types in Python
+
+Python has several built-in data types, categorized as:
+
+a) Numeric Types
+
+int: Integer (e.g., 5)
+
+float: Floating point (e.g., 5.5)
+
+complex: Complex numbers (e.g., 2 + 3j)
+
+b) Text Type
+
+str: String (e.g., "Hello")
+
+c) Sequence Types
+
+list: Ordered, mutable (e.g., [1, 2, 3])
+
+tuple: Ordered, immutable (e.g., (1, 2, 3))
+
+range: Sequence of numbers (e.g., range(5))
+
+d) Set Types
+
+set: Unordered, no duplicates (e.g., {1, 2, 3})
+
+frozenset: Immutable set
+
+e) Mapping Type
+
+dict: Key-value pairs (e.g., {"name": "John", "age": 30})
+
+f) Boolean Type
+
+bool: True or False
+
+g) Binary Types
+
+bytes, bytearray, memoryview
+Functions in Python
+
+Definition: A function is a block of code which runs only when called.
+
+Types:
+
+Built-in: print(), len(), etc.
+
+User-defined
+
+Lambda (anonymous) functions
+
+Example:
+def greet(name):
+    return f"Hello, {name}"
+
+print(greet("Alice"))
+
+
+Lambda example:
+
+add = lambda x, y: x + y
+print(add(5, 3))
+
+🔹 5. Packages and Modules in Python
+
+Module: A .py file with functions/classes.
+
+Package: A folder with multiple modules and a special __init__.py file.
+
+Example:
+
+Create module: math_utils.py
+
+def add(a, b):
+    return a + b
+
+
+Use it:
+
+import math_utils
+print(math_utils.add(2, 3))
+
+
+Built-in packages: os, math, random, etc.
+
+🔹 6. Exceptions in Python
+
+Definition: Exceptions are errors detected during execution.
+
+Common Exceptions:
+
+ZeroDivisionError
+
+TypeError
+
+ValueError
+
+FileNotFoundError
+
+KeyError
+
+Handling:
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Can't divide by zero!")
+finally:
+    print("This always runs.")
+
+Custom Exception:
+class MyError(Exception):
+    pass
+
+🔹 7. File Handling in Python
+
+Definition: File handling allows reading, writing, and manipulating files.
+
+Modes:
+
+'r': Read
+
+'w': Write (overwrite)
+
+'a': Append
+# Write
+with open("example.txt", "w") as f:
+    f.write("Hello, file!")
+
+# Read
+with open("example.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+'rb' / 'wb': Binary modes
+🔷 OOPs in Python – Full Concepts with Examples
+
+OOP (Object-Oriented Programming) is a way of writing code that models real-world entities as objects. Each object has attributes (data) and methods (functions).
+
+✅ 1. Class and Object
+
+Class: Blueprint for creating objects.
+
+Object: Instance of a class.
+
+🧪 Example:
+class Person:
+    def __init__(self, name, age):  # Constructor
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, I'm {self.name} and I'm {self.age} years old.")
+
+# Object creation
+p1 = Person("Alice", 25)
+p1.greet()
+
+✅ 2. Inheritance
+
+Allows a class (child) to inherit attributes and methods from another class (parent).
+
+🧪 Example:
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):  # Inherits from Animal
+    def bark(self):
+        print("Dog barks")
+
+d = Dog()
+d.speak()  # From parent
+d.bark()   # From child
+
+✅ 3. Encapsulation
+
+Wrapping data and code into a single unit and restricting access using private/protected variables.
+
+🧪 Example:
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private variable
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+acc = BankAccount(1000)
+acc.deposit(500)
+print(acc.get_balance())  # ✅ 1500
+# print(acc.__balance) ❌ Error: Private variable
+
+✅ 4. Polymorphism
+
+Same method name, but different behavior depending on the class.
+
+🧪 Example:
+class Bird:
+    def sound(self):
+        print("Some bird sound")
+
+class Parrot(Bird):
+    def sound(self):
+        print("Parrot says: Hello!")
+
+class Crow(Bird):
+    def sound(self):
+        print("Crow says: Caw Caw!")
+
+# Polymorphism in action
+for bird in [Parrot(), Crow()]:
+    bird.sound()
+
+✅ 5. Abstraction
+
+Hiding complex details and exposing only essential parts using abstract base classes.
+
+🧪 Example (using abc module):
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started.")
+
+car = Car()
+car.start_engine()
+
+✅ 6. Constructor (__init__)
+
+A special method that runs when a new object is created.
+
+🧪 Example:
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+        print("Student name is", self.name)
+
+s = Student("Tom")
+s.show()
+
+✅ 7. Destructor (__del__)
+
+A method that runs when an object is deleted or goes out of scope.
+
+🧪 Example:
+class Demo:
+    def __del__(self):
+        print("Object destroyed")
+
+d = Demo()
+del d  # Triggers __del__
+
+✅ 8. Self Keyword
+
+Refers to the current instance of the class.
+
+🧪 Example:
+class Example:
+    def show(self):
+        print("Called using", self)
+
+e = Example()
+e.show()
+
+✅ 9. Class vs Instance Variables
+
+Instance variable: Unique to each object.
+
+Class variable: Shared by all instances.
+
+🧪 Example:
+class Demo:
+    class_var = "Shared"
+
+    def __init__(self, name):
+        self.name = name  # Instance var
+
+a = Demo("A")
+b = Demo("B")
+
+print(a.name)        # A
+print(b.name)        # B
+print(Demo.class_var) # Shared
+
+✅ 10. Method Types in Class
+
+Instance Method: Operates on object (self)
+
+Class Method: Operates on class (cls)
+
+Static Method: No self or cls, utility function.
+
+🧪 Example:
+class Test:
+    def instance_method(self):
+        print("Instance Method")
+
+    @classmethod
+    def class_method(cls):
+        print("Class Method")
+
+    @staticmethod
+    def static_method():
+        print("Static Method")
+
+obj = Test()
+obj.instance_method()
+Test.class_method()
+Test.static_method()
