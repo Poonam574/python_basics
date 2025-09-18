@@ -1,0 +1,39 @@
+Pandas is a Python library for data analysis and manipulation.
+
+Series is a one-dimensional labeled array (like a single column).
+
+DataFrame is a two-dimensional table of data with rows and columns.
+
+read_csv() loads data from a CSV file into a DataFrame.
+
+head() shows the first few rows of a DataFrame.
+
+tail() shows the last few rows of a DataFrame.
+
+info() gives a summary of the DataFrame's structure.
+
+describe() provides statistical summaries of numeric columns.
+
+df['column'] accesses a single column from the DataFrame.
+
+df.loc[row_index] accesses rows by index label.
+
+df.iloc[row_number] accesses rows by integer position.
+
+Filtering uses conditions to select specific rows (e.g., df[df['Age'] > 18]).
+
+Sorting arranges data using sort_values() by column(s).
+
+GroupBy lets you group data and apply functions like sum, mean, etc.
+
+isnull() checks for missing (NaN) values.
+
+fillna() replaces missing values with a specified value.
+
+dropna() removes rows or columns with missing data.
+
+merge() combines DataFrames based on common columns (like SQL JOIN).
+
+concat() stacks multiple DataFrames vertically or horizontally.
+
+to_csv() exports a DataFrame to a CSV file.
