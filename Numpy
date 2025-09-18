@@ -1,0 +1,80 @@
+NumPy is a Python library for fast numerical operations on large arrays and matrices.
+
+ndarray is the core data structure in NumPy, representing n-dimensional arrays.
+
+array() creates a NumPy array from a Python list or tuple.
+
+arange() creates arrays with evenly spaced values (like range() but for arrays).
+
+linspace() creates arrays with a specified number of values between two points.
+
+reshape() changes the shape of an array without changing its data.
+
+dtype shows or sets the data type of array elements.
+
+shape returns the dimensions (rows, columns, etc.) of an array.
+
+size gives the total number of elements in an array.
+
+ndim gives the number of dimensions of an array.
+
+zeros() creates an array filled with zeros.
+
+ones() creates an array filled with ones.
+
+eye() creates an identity matrix (diagonal 1s, rest 0s).
+
+sum(), mean(), std() compute basic stats across array elements.
+
+axis parameter allows operations (like sum or mean) across rows or columns.
+
+random.rand() generates random numbers in a given shape.
+
+array slicing works like lists (arr[1:4], arr[:, 0], etc.).
+
+broadcasting allows arithmetic between arrays of different shapes.
+
+vectorization speeds up operations by avoiding Python loops.
+
+np.dot() and np.matmul() perform matrix multiplication.
+
+20 key NumPy concepts,
+NumPy
+
+ndarray
+
+array()
+
+arange()
+
+linspace()
+
+reshape()
+
+shape
+
+dtype
+
+size
+
+ndim
+
+zeros()
+
+ones()
+
+eye()
+
+sum(), mean(), min(), max()
+
+axis
+
+random.rand()
+
+slicing/indexing
+
+broadcasting
+
+vectorization
+
+dot(), matmul()
