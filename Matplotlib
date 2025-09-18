@@ -1,1 +1,399 @@
+                            om namah shivaya
+John D. Hunter Matplotlib is a Python library used for data visualization. It allows you to create static, animated, and interactive plots in Python
+module used for plotting  import matplotlib.pyplot as plt
+1. Bar Chart Compare categories (e.g., sales per product). import matplotlib.pyplot as plt
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 25] 
+plt.bar(categories, values, color='skyblue')
+plt.title('Bar Chart')
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.show()
+
+🔍 Explanation:
+
+plt.bar(x, y): Plots bars for each x-label with height y.
+
+Good for: Categorical data.
+
+2. Horizontal Bar Chart
+📈 Example:
+plt.barh(categories, values, color='orange')
+plt.title('Horizontal Bar Chart')
+plt.xlabel('Values')
+plt.ylabel('Categories')
+plt.show()
+
+🔍 Difference:
+
+Same as bar chart, but horizontal. Useful when category names are long.
+
+3. Line Chart
+📌 Use:
+
+Shows trends over time.
+
+x = [1, 2, 3, 4, 5]
+y = [5, 7, 4, 6, 8]
+
+plt.plot(x, y, marker='o', linestyle='-', color='green')
+plt.title('Line Chart')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.grid(True)
+plt.show()
+
+🔍 Explanation:
+
+plt.plot(): Draws a line.
+
+Use for continuous data (e.g., time series).
+
+4. Scatter Plot
+📌 Use:
+
+Shows relationship between two numerical variables.
+
+x = [5, 7, 8, 7, 2, 17, 2]
+y = [99, 86, 87, 88, 100, 86, 103]
+
+plt.scatter(x, y, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
+
+🔍 Use case:
+
+Visualizing correlation, distribution.
+
+5. Pie Chart
+📌 Use:
+
+Shows proportions (parts of a whole).
+
+labels = ['A', 'B', 'C', 'D']
+sizes = [25, 35, 20, 20]
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title('Pie Chart')
+plt.axis('equal')  # Equal aspect ratio
+plt.show()
+
+🔍 Caution:
+
+Not good for comparing many values or similar sizes.
+
+6. Histogram
+📌 Use:
+
+Shows distribution of data (grouped into bins).
+
+import numpy as np
+
+data = np.random.randn(1000)  # Normally distributed data
+
+plt.hist(data, bins=30, color='purple', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+
+🔍 Use case:
+John D. Hunter Matplotlib is a Python library used for data visualization. It allows you to create static, animated, and interactive plots in Python
+module used for plotting  import matplotlib.pyplot as plt
+1. Bar Chart Compare categories (e.g., sales per product). import matplotlib.pyplot as plt
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 25] 
+plt.bar(categories, values, color='skyblue')
+plt.title('Bar Chart')
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.show()
+
+🔍 Explanation:
+
+plt.bar(x, y): Plots bars for each x-label with height y.
+
+Good for: Categorical data.
+
+2. Horizontal Bar Chart
+📈 Example:
+plt.barh(categories, values, color='orange')
+plt.title('Horizontal Bar Chart')
+plt.xlabel('Values')
+plt.ylabel('Categories')
+plt.show()
+
+🔍 Difference:
+
+Same as bar chart, but horizontal. Useful when category names are long.
+
+3. Line Chart
+📌 Use:
+
+Shows trends over time.
+
+x = [1, 2, 3, 4, 5]
+y = [5, 7, 4, 6, 8]
+
+plt.plot(x, y, marker='o', linestyle='-', color='green')
+plt.title('Line Chart')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.grid(True)
+plt.show()
+
+🔍 Explanation:
+
+plt.plot(): Draws a line.
+
+Use for continuous data (e.g., time series).
+
+4. Scatter Plot
+📌 Use:
+
+Shows relationship between two numerical variables.
+
+x = [5, 7, 8, 7, 2, 17, 2]
+y = [99, 86, 87, 88, 100, 86, 103]
+
+plt.scatter(x, y, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
+
+🔍 Use case:
+
+Visualizing correlation, distribution.
+
+5. Pie Chart
+📌 Use:
+
+Shows proportions (parts of a whole).
+
+labels = ['A', 'B', 'C', 'D']
+sizes = [25, 35, 20, 20]
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title('Pie Chart')
+plt.axis('equal')  # Equal aspect ratio
+plt.show()
+
+🔍 Caution:
+
+Not good for comparing many values or similar sizes.
+
+6. Histogram
+📌 Use:
+
+Shows distribution of data (grouped into bins).
+
+import numpy as np
+
+data = np.random.randn(1000)  # Normally distributed data
+
+plt.hist(data, bins=30, color='purple', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+
+🔍 Use case:
+
+Checking normality, skewness, outliers.
+
+7. Box Plot (Box-and-Whisker Plot)
+📌 Use:
+
+Shows median, quartiles, and outliers.
+
+data = [7, 15, 13, 18, 22, 29, 35, 40, 43, 50]
+
+plt.boxplot(data)
+plt.title('Box Plot')
+plt.ylabel('Value')
+plt.show()
+
+🔍 Good for:
+
+Understanding spread, variability, outliers.
+
+8. Stacked Bar Chart
+📌 Use:
+
+Compare parts of categories over each other.
+
+import numpy as np
+
+labels = ['A', 'B', 'C']
+val1 = [3, 5, 1]
+val2 = [4, 2, 6]
+
+x = np.arange(len(labels))
+
+plt.bar(x, val1, label='Set 1')
+plt.bar(x, val2, bottom=val1, label='Set 2')
+
+plt.xticks(x, labels)
+plt.title('Stacked Bar Chart')
+plt.legend()
+plt.show()
+
+9. Area Chart
+📌 Use:
+
+Like a line chart, but area under line is filled.
+
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 6, 8, 5]
+
+plt.fill_between(x, y, color='lightblue')
+plt.plot(x, y, color='blue')
+plt.title('Area Chart')
+plt.show()
+
+10. Heatmap (using seaborn with matplotlib)
+import seaborn as sns
+import numpy as np
+
+data = np.random.rand(4, 6)
+sns.heatmap(data, annot=True, cmap='coolwarm')
+plt.title('Heatmap')
+plt.show()
+
+11. Multiple Plots (Subplots)
+📌 Use:
+
+Show many charts in one window.
+
+fig, axs = plt.subplots(2, 2)
+
+axs[0, 0].bar([1, 2, 3], [3, 2, 5])
+axs[0, 0].set_title('Bar')
+
+axs[0, 1].plot([1, 2, 3], [1, 4, 9])
+axs[0, 1].set_title('Line')
+
+axs[1, 0].scatter([1, 2, 3], [9, 5, 1])
+axs[1, 0].set_title('Scatter')
+
+axs[1, 1].hist([1, 2, 1, 4, 2, 2, 1, 3])
+axs[1, 1].set_title('Histogram')
+
+plt.tight_layout()
+plt.show()
+
+🛠️ Customization Options
+
+plt.title(), plt.xlabel(), plt.ylabel()
+
+plt.legend()
+
+plt.grid(True)
+
+plt.xticks(), plt.yticks()
+
+Colors: 'red', 'blue', '#FF5733'
+
+Styles: linestyle='--', marker='o
+
+Checking normality, skewness, outliers.
+
+7. Box Plot (Box-and-Whisker Plot)
+📌 Use:
+
+Shows median, quartiles, and outliers.
+
+data = [7, 15, 13, 18, 22, 29, 35, 40, 43, 50]
+
+plt.boxplot(data)
+plt.title('Box Plot')
+plt.ylabel('Value')
+plt.show()
+
+🔍 Good for:
+
+Understanding spread, variability, outliers.
+
+8. Stacked Bar Chart
+📌 Use:
+
+Compare parts of categories over each other.
+
+import numpy as np
+
+labels = ['A', 'B', 'C']
+val1 = [3, 5, 1]
+val2 = [4, 2, 6]
+
+x = np.arange(len(labels))
+
+plt.bar(x, val1, label='Set 1')
+plt.bar(x, val2, bottom=val1, label='Set 2')
+
+plt.xticks(x, labels)
+plt.title('Stacked Bar Chart')
+plt.legend()
+plt.show()
+
+9. Area Chart
+📌 Use:
+
+Like a line chart, but area under line is filled.
+
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 6, 8, 5]
+
+plt.fill_between(x, y, color='lightblue')
+plt.plot(x, y, color='blue')
+plt.title('Area Chart')
+plt.show()
+
+10. Heatmap (using seaborn with matplotlib)
+import seaborn as sns
+import numpy as np
+
+data = np.random.rand(4, 6)
+sns.heatmap(data, annot=True, cmap='coolwarm')
+plt.title('Heatmap')
+plt.show()
+
+11. Multiple Plots (Subplots)
+📌 Use:
+
+Show many charts in one window.
+
+fig, axs = plt.subplots(2, 2)
+
+axs[0, 0].bar([1, 2, 3], [3, 2, 5])
+axs[0, 0].set_title('Bar')
+
+axs[0, 1].plot([1, 2, 3], [1, 4, 9])
+axs[0, 1].set_title('Line')
+
+axs[1, 0].scatter([1, 2, 3], [9, 5, 1])
+axs[1, 0].set_title('Scatter')
+
+axs[1, 1].hist([1, 2, 1, 4, 2, 2, 1, 3])
+axs[1, 1].set_title('Histogram')
+
+plt.tight_layout()
+plt.show()
+
+🛠️ Customization Options
+
+plt.title(), plt.xlabel(), plt.ylabel()
+
+plt.legend()
+
+plt.grid(True)
+
+plt.xticks(), plt.yticks()
+
+Colors: 'red', 'blue', '#FF5733'
+
+Styles: linestyle='--', marker='o
+
 
