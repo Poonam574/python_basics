@@ -1,0 +1,13 @@
+| Exception               | Raised When...                                     |
+| ----------------------- | -------------------------------------------------- |
+| **`ZeroDivisionError`** | You divide by zero.                                |
+| **`ValueError`**        | Invalid value (e.g., converting `"abc"` to `int`). |
+| **`TypeError`**         | Operation on wrong data type (e.g., `"2" + 2`).    |
+| **`IndexError`**        | Index out of range in a list.                      |
+| **`KeyError`**          | Dictionary key not found.                          |
+| **`NameError`**         | Variable not defined.                              |
+| **`FileNotFoundError`** | File doesn’t exist when trying to open it.         |
+| **`AttributeError`**    | Invalid attribute access.                          |
+| **`ImportError`**       | Import fails.                                      |
+| **`RuntimeError`**      | Generic runtime error.                             |
+| **`StopIteration`**     | Raised by `next()` on an exhausted iterator.       |
